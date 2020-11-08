@@ -1,0 +1,15 @@
+﻿@model hello.Models.Movie
+@{
+    ViewBag.Title = "Random";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 >@Model.name</h2>
+<script>
+    let h1 = document.querySelector('h2');
+    let something ="we are so happy to help you watch your best movies."
+    h1.addEventListener('click', () => {
+        alert(`hello dear do you want to watch @Model.name ${something}`)
+    })
+</script>
+
