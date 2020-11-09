@@ -15,5 +15,10 @@ namespace hello.Controllers
             Movie movie = new Movie() { name="detachment",id=1};
             return View(movie);
         }
+        [Route("Movies/SayHi/{name}/{age:regex(\\d{2,3})}")]
+        public ActionResult SayHi(string name="issam",int age = 20)
+        {
+            return Content("hello " + name + " so you are " + age + " years old.");
+        }
     }
 }
